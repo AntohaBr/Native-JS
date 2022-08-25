@@ -20,6 +20,9 @@ function App() {
     let [onCheckBox, setCheckBox] = useState<boolean>(true)
     let [parenSelect, setParenSelect] = useState<string | undefined>(undefined)
 
+
+
+
     const onClickAccordion = (value: any) => {
         console.log(value)
     }
@@ -50,7 +53,18 @@ function App() {
             <UncontrolledInput title={'input'}/>
             <СontrolledInput value={parenValue} onChange={setParenValue}/>
             <ControlledCheckBox onCheckBox={onCheckBox} onOnChange={setCheckBox}/>
-            <ControlledSelect value={parenSelect} onChange={setParenSelect}/>
+            <ControlledSelect
+                items={[
+                {title: 'Gomel', value: 1},
+                {title: 'LS', value: 2},
+                {title: 'NY', value: 3},
+                {title: 'Grodno', value: 4},
+                {title: 'Brest', value: 5},
+                {title: 'Piter', value: 6}
+            ]}
+                value={parenSelect}
+                onChange={setParenSelect}
+               />
         </div>
     );
 }
