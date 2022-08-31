@@ -44,33 +44,33 @@ const user = {
 }
 
 //1. Создайте поверхностную копию объекта user
-let copyUser = {...user}
+let copyUser =
 
 //Проверка:
-console.log(user===copyUser) //false
-console.log(user.friends===copyUser.friends) //true
+console.log()
+console.log()
 
 //2. Полная (глубокая) копия объекта user
-let deepCopyUser = {...user,friends: [...user.friends]}
+let deepCopyUser =
 
 //Проверка:
-console.log(user===deepCopyUser) //false
-console.log(user.friends===deepCopyUser.friends) //false
+console.log()
+console.log()
 
 //3. Поверхностная копия массива students
-let copyStudents = [...students]
+let copyStudents =
 
 //Проверка:
-console.log(copyStudents === students)
-console.log(copyStudents[0] === students[0])
+console.log()
+console.log()
 
 
 //4*. Полная (глубокая) копия массива students (map)
-let deepCopyStudents = students.map(st => ({...st}))
+let deepCopyStudents =
 
 //Проверка:
-console.log(deepCopyStudents === students) //false
-console.log(deepCopyStudents[0] === students[0]) //false
+console.log()
+console.log()
 
 // NB!!! Далее все преобразования выполняем не модифицируя исходный массив students
 // Вывод результатов - в консоль
