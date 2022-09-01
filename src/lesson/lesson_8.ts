@@ -85,8 +85,19 @@ export function sumFirstNumbers(N: number): number {
 // Считаем, что количество банкнот каждого номинала не ограничено
 
 
-export function getBanknoteList(amountOfMoney: number): Array<number> {
+export function getBanknoteList(sum: number): Array<number> {
     //...здесь пишем код.
-
-    return [1]
+    let banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1]
+    let result = []
+    let currPos=0
+    while (sum>0){
+        if(sum - banknotes [currPos] >=0){
+            sum -= banknotes [currPos]
+            result.push(banknotes [currPos])
+        }
+        else {
+            currPos ++
+        }
+    }
+    return result
 }
