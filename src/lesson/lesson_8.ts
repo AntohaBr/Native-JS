@@ -1,7 +1,7 @@
 // 1. Функция sum принимает параметром целые положительные
 // числа (неопределённое кол-во) и возвращает их сумму (rest).
 
-import {string} from "prop-types";
+import {number, string} from "prop-types";
 
 export function sum(...nums: Array<number>): number {
     console.log(nums)
@@ -20,10 +20,20 @@ export function sum(...nums: Array<number>): number {
 
 export function getTriangleType(a: number, b: number, c: number): string {
     //...здесь пишем код
-
-    return ""
+if (a>b && a>c && b==c){
+    return "00"
 }
-
+else if (a === b && b === c && a === c) {
+        return "10"
+    }
+else if (a === b || a === c || b === c) {
+        return "01"
+    }
+else if (a != b && b != c && a != c) {
+        return "11"
+    }
+return ''
+}
 
 // 3. Функция getSum принимает параметром целое число и возвращает
 // сумму цифр этого числа
