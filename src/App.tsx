@@ -1,70 +1,20 @@
-import React, {useState} from 'react';
-import {Accordion} from "./components/Accordion/Accordion";
-import {Rating, RatingValueType} from "./components/Rating/Rating";
-import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import React from 'react';
 import './App.css';
-import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
-import UncontrolledOndOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
-import {OnOff} from "./components/OnOff/OnOffControl";
-import {UncontrolledInput} from "./elements/Input/UncontrolledInput";
-import {СontrolledInput} from "./elements/Input/СontrolledInput";
-import {ControlledCheckBox} from "./elements/CheckBox/СontrolledCheckBox";
-import {ControlledSelect} from "./elements/Select/СontrolledSelect";
-
+// import Lesson1 from './lessons/lesson1/lesson1';
+// import './lessons/lesson2/lesson2';
+// import Lesson3 from './lessons/lesson3/Lesson3';
+// import Lesson4 from './lessons/lesson4/Lesson4';
+// import './lessons/lesson5/lesson5';
+// import './lessons/lesson6/lesson6';
+// import './lessons/lesson7/lesson7';
+// import './lessons/lesson8/lesson8';
 
 function App() {
-    let [ratingValue, setRatingValue] = useState<RatingValueType>(4)
-    let [accorionCollapsed, setAccorionCollapsed] = useState<boolean>(false)
-    let [switchOn, setSwitchOn] = useState<boolean>(false); //hook
-    let [parenValue, setParenValue] = useState('')
-    let [onCheckBox, setCheckBox] = useState<boolean>(true)
-    let [parenSelect, setParenSelect] = useState<string | undefined>(undefined)
-
-
-
-
-    const onClickAccordion = (value: any) => {
-        console.log(value)
-    }
     return (
-        <div className={'App'}>
-            <OnOff
-                valueOn={switchOn}
-                onChange={setSwitchOn}/>
-            {/*<UncontrolledRating/>*/}
-            {/*<UncontrolledAccordion titleValue={'Menu'}/>*/}
-            {/*<UncontrolledAccordion titleValue={'Users'}/>*/}
-            <Accordion
-                items={[
-                    {title: 'Anton', value: 1},
-                    {title: 'Igor', value: 2},
-                    {title: 'Ivan', value: 3},
-                    {title: 'Sasha', value: 4}
-                ]}
-                titleValue={"Name"}
-                collapsed={accorionCollapsed}
-                onChange={() => {
-                    setAccorionCollapsed(!accorionCollapsed)
-                }}
-                onClick={onClickAccordion}
-            />
-            <Rating value={ratingValue} onClick={setRatingValue}/>
-            <UncontrolledOndOff onChange={setSwitchOn}/> {switchOn.toString()}
-            <UncontrolledInput title={'input'}/>
-            <СontrolledInput value={parenValue} onChange={setParenValue}/>
-            <ControlledCheckBox onCheckBox={onCheckBox} onOnChange={setCheckBox}/>
-            <ControlledSelect
-                items={[
-                {title: 'Gomel', value: 1},
-                {title: 'LS', value: 2},
-                {title: 'NY', value: 3},
-                {title: 'Grodno', value: 4},
-                {title: 'Brest', value: 5},
-                {title: 'Piter', value: 6}
-            ]}
-                value={parenSelect}
-                onChange={setParenSelect}
-               />
+        <div className="container">
+            {/*<Lesson1 />*/}
+            {/*<Lesson3 />*/}
+            {/*<Lesson4 />*/}
         </div>
     );
 }
