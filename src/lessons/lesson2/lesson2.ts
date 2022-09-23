@@ -39,19 +39,19 @@ console.log('lesson 2');
 // counter2(); // 1
 // counter(); // 3
 
-function makeCounter() {
-    let count = 1;
-    return function() {
-        return count++;
-    };
-}
-const counter = makeCounter();
-const counter2 = makeCounter();
-
-alert( counter() );
-alert( counter() );
-alert( counter2() );
-alert( counter() );
+// function makeCounter() {
+//     let count = 1;
+//     return function() {
+//         return count++;
+//     };
+// }
+// const counter = makeCounter();
+// const counter2 = makeCounter();
+//
+// alert( counter() );
+// alert( counter() );
+// alert( counter2() );
+// alert( counter() );
 
 
 // Task 03
