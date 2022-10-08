@@ -1,0 +1,83 @@
+<meta charset="UTF-8">
+<script>
+
+    // let myPromise = new Promise((resolve,reject) => {
+    //     setTimeout(()=>{
+    //         alert('Hello');
+    //         resolve();
+    //     },2000)
+    // });
+    //
+    // myPromise.then(( ) => {
+    //     console.log("myPromise зарезолвился, и я узнал об этом");
+    // })
+
+
+    // let myPromise = new Promise((resolve,reject) => {
+    //     setTimeout(()=>{
+    //      const randValue = Math.random()
+    //         resolve(randValue);
+    //     },2000)
+    // });
+    //
+    // myPromise.then((res ) => {
+    //     console.log("myPromise зарезолвился, и я узнал об этом" + res);
+    // })
+    //
+    // myPromise.then((res ) => {
+    //     console.log("222:" + res);
+    // })
+
+
+    // const doAfter = () => {
+    //     let myPromise = new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             const randValue = Math.random()
+    //             resolve(randValue);
+    //         }, 2000)
+    //     });
+    //     return myPromise
+    // }
+    //
+    // doAfter().then(() => console.log('я сработал через 5 секунд'));
+    // doAfter().then(() => console.log('а я сработал через 3 секунд'));
+    // doAfter().then(() => console.log('я сработал через 10 секунд'));
+
+
+
+
+    // const doAfter = (seconds) => {
+    //     let myPromise = new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             const randValue = Math.random()
+    //             resolve(randValue);
+    //         }, seconds *1000)
+    //     });
+    //     return myPromise
+    // }
+    //
+    // doAfter(5).then(() => console.log('я сработал через 5 секунд'));
+    // doAfter(3).then(() => console.log('а я сработал через 3 секунд'));
+    // doAfter(10).then(() => console.log('я сработал через 10 секунд'));
+
+
+
+
+    const doAfter = (seconds) => {
+        let myPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const randValue = Math.random()
+                resolve(randValue);
+            }, seconds *1000)
+        });
+        return myPromise
+    }
+
+    let promise3 = doAfter(3);
+    promise3.then( () => console.log('я сработал через 3 секунд') );
+    promise3.then( () => console.log('и я тоже следом сработал через 3 секунд') );
+    promise3.then( () => console.log('и я') );
+
+
+
+</script>
