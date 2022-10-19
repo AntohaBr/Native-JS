@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import {Counter} from "./localStorage-from-redux/Counter";
+import {Provider} from "react-redux";
 // import Lesson1 from './lessons/lesson1/lesson1';
 // import './lessons/lesson2/lesson2';
 // import Lesson3 from './lessons/lesson3/Lesson3';
@@ -15,6 +17,7 @@ function App() {
             {/*<Lesson1 />*/}
             {/*<Lesson3 />*/}
             {/*<Lesson4 />*/}
+            <Counter/>
         </div>
     );
 }

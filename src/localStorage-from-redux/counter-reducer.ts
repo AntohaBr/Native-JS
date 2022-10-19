@@ -20,9 +20,9 @@ export const counterReducer = (state: InitialStateType = initialState, action: A
 }
 
 
- type incValueACType = ReturnType<typeof incValueAC>
- type setValueFromLocalStorageACType = ReturnType<typeof setValueFromLocalStorageAC>
- export type ActionType = incValueACType | setValueFromLocalStorageACType
+ type IncValueACType = ReturnType<typeof incValueAC>
+ type SetValueFromLocalStorageACType = ReturnType<typeof setValueFromLocalStorageAC>
+ export type ActionType = IncValueACType | SetValueFromLocalStorageACType
 
 
 export const incValueAC = () => ({type: 'INC_VALUE'} as const)
